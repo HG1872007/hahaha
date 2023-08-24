@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<tirtle>Document</tirtle>
+</head>
+
+<input type="text" id="name">
+<button id = "btn">Click here</button>
+<p id="alert"></p>
+<button id = "btn2">Click here2</button>
+<div id = "content">
+
+<script>
+  document.getElementById("btn").addEventListener("click",MyFuncion)
+  
+ function MyFuncion(){
+    let data = document.getElementById("name").value;
+    if(data==""){
+      document.getElementById("alert").innerHTML="ban chua nhap gi ca";
+      document.getElementById("alert").classlist.add("error");
+     
+    }
+    else{
+      document.getElementById("alert").innerHTML="ban da nhap thanh cong va do la :"+data;
+      document.getElementById("alert").classlist.add("success");
+     
+    }
+  }
+  document.getElementById("btn2").addEventListener("click", nhan);
+   function nhan (){
+     let content = document.getElementById("content")
+     console.log("Get sec ");
+     if(content.classlist.contains("content")==true)
+     content.classlist.remove("content")
+else{
+  content.classlist.add("content")
+}
+
+  }
+
+</script>
+</head>
+</body>
+</html>
